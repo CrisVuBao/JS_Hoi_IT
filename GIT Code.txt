@@ -1,0 +1,22 @@
+…or create a new repository on the command line
+echo "# JavaScript_Hoi_IT" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/CrisMixi/JavaScript_Hoi_IT.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/CrisMixi/JavaScript_Hoi_IT.git
+git branch -M main
+git push -u origin main
+
+++++++++++++++++++++++++
+Step UpFile to GitHub
+Step 1: git init
+Step 2: git branch -m "_nameBranch_"
+Step 3: git status
+Step 4: git remote add origin _LinkGitHub_
+Step 5: git add .
+Step 6: git commit -m "_comment_"  +  Step 7: git push origin _nameBranch_
