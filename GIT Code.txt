@@ -21,3 +21,5 @@ Step 4: git remote add origin _LinkGitHub_
 Step 5: git add .
 Step 6: git commit -m "_comment_"  +  Step 7: git push origin _nameBranch_
 !!! IF ERROR 403, v.v.. : Delete folder ".git"
+
+Switch branch in git: git checkout _branch_
