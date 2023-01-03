@@ -15,3 +15,14 @@ console.log(`My House + ${dog + cat}`);
 
 let proVip = "This is a Ex about Backticks"
 console.log(`ProVip: ${proVip}`);
+
+let person = {
+    name: "tao pro",
+    age: "17",
+    favorite: "like Kpop"
+    
+    
+}
+
+person.age = 100;
+console.log(person);
