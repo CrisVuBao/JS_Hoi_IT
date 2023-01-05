@@ -1,23 +1,23 @@
-let dogs = ['husky','chó cỏ','alaska']
+let arrAnimals = [
+  'Con Chó', // index arr: 0
+  'Con Mèo',//  ---------: 1
+  'Con Lợn'//    --------: 2
+  // index belong to array from number 0
+];
 
-for(let i = 0; i < dogs.length; i++) {
-  console.log(dogs[i]);
-
-  // in loop
-  // Nên sử dụng let vì phạm vi(scope) ngắn, chỉ trong vòng lặp
-  // phạm vi của var rộng, nên dễ bị sai xót, hiểu lầm.
-  // Ex: for(let a = 5), chỉ trong vòng lặp mới biết a = 5;
-  //     for(var a = 5) {};
-  //   console.log(a); //, khi console.log ở bên ngoài vòng lặp thì vẫn biết a = 5
+for(let i = 0; i<arrAnimals.length;i++) {
+  console.log(i + 1,arrAnimals[i]); // i + 1: i start from number 1
 }
 
-console.log(i);
+//# while loop
+let a = 0
+while(a < arrAnimals.length) { // while loop // While(condition<điều kiện>) {};
+  console.log(arrAnimals[a]);
+  a++;
+};
 
-// i++ and ++i
-//Ex:
-let i1 = 10;
-let j1 = i1++; // i = 11, j = 10
-console.log(j)  
-//Ex 2:
-let i2 = 10;
-let j2 = ++i2; // i = 11; j = 11;
+//# do while loop
+do {
+  console.log(a + 1, arrAnimals[a]);
+  a++;
+}while (a < 0)
