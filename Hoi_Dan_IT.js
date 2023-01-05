@@ -1,25 +1,13 @@
-// Array = [item1,item2,item3,....];
-//Ex Output: 
+//Video_#14
 
-/*[
-    0: "A", 0: is index
-    1: "B", 1: is index
-    2: "C"  2: is index
-  ]*/
+/* Compare:
+  == : compare value
+  === : compare type, value
+*/
+let poundDog = 30;
+let poundCat = 5;
+console.log("Compare:", poundDog === poundCat);
 
-  // Oject in Array
-  //Ex 1:
-  let computer = [
-    {name: "PC", display: "100inh"},
-    {name: "Laptop", display: "10inh"},
-    {name: "Playstation", display: "50inh"}
-  ];
-  console.log(computer);
-  //Ex2:
-  let phone = [
-    {name: "Samsung", country: "Korean"},
-    {name: "Iphone", country: "USA"},
-    {name: "Xiaomi", country: "China"},
-    {name: "Nokia", country: "Finland"}
-  ];
-  console.log(phone);
+// Empty: Rỗng
+// Underfined: không xác định 
+// Null:  Ex: let a = Null; || let a = '';
