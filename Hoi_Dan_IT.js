@@ -1,13 +1,12 @@
-// if
-let arrCom = ['display','cpu','ram','ssd','power'];
-
-let i = 0;
-while(i <= arrCom.length) {
-  if(arrCom[i] === 'power') {
-    console.log(arrCom[i]);
+let animals = 1
+switch(animals) {
+  case 0:
+    animals = "cho"
+  case 1:
+    animals = "cho cho"
+  case 2:
+    animals = "vip"
     break;
-  }
-  i++;
+    // khi không có break, thì dù có chọn animal = 1, thì vẫn chạy xuống case 2
 };
-
-
+console.log(animals);
