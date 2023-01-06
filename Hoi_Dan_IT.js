@@ -1,23 +1,13 @@
-let arrAnimals = [
-  'Con Chó', // index arr: 0
-  'Con Mèo',//  ---------: 1
-  'Con Lợn'//    --------: 2
-  // index belong to array from number 0
-];
+// if
+let arrCom = ['display','cpu','ram','ssd','power'];
 
-for(let i = 0; i<arrAnimals.length;i++) {
-  console.log(i + 1,arrAnimals[i]); // i + 1: i start from number 1
-}
-
-//# while loop
-let a = 0
-while(a < arrAnimals.length) { // while loop // While(condition<điều kiện>) {};
-  console.log(arrAnimals[a]);
-  a++;
+let i = 0;
+while(i <= arrCom.length) {
+  if(arrCom[i] === 'power') {
+    console.log(arrCom[i]);
+    break;
+  }
+  i++;
 };
 
-//# do while loop
-do {
-  console.log(a + 1, arrAnimals[a]);
-  a++;
-}while (a < 0)
+
