@@ -1,14 +1,15 @@
-// Scope
-let aPro = 10;
-console.log(aPro); // global scope
+// Function
+// input paramater: tham số đầu vào
+function sum(a,b) { // (a,b) là tham số
+  return a + b;
+}
 
-function animals(dog,cat) { //function scope
+let c = sum(10,10)
+// or
+console.log(sum(10,10))
 
-  let aFun = "con Cho"; // function scope 
-
-  let dogPro = { // block scope
-    a : 10,
-    b : 20
-  };
-
-};
+// My Ex:
+function superMan(name,age) {
+  return name + age;
+}
+console.log(superMan("Siêu Nhân"," Ngu"));
