@@ -34,3 +34,14 @@ let getLoop = (loop) => {
   }
 }
 console.log(getLoop());
+
+
+//Ex Function. Methods
+let family = {
+  name: "cho",
+  age: "10",
+  getDog: function(n1) {
+    return n1
+  }
+}
+console.log(family.getDog("gọi câu này từ function bên trong object"));
