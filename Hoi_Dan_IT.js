@@ -1,20 +1,15 @@
-let  dogNumber = [
-  {name: 'husky', crazy: 1},
-  {name: 'alaska', crazy: 2},
-  {name: 'cogy', crazy: 3},
-  {name: 'cho ngu', crazy: 3}
-];
-// Filter, Find
-let putFilter = dogNumber.filter((item,index) => {
-  return item &&  item.crazy === 3; // nếu chỉ để mỗi item.crazy === 3 thì 
-  // nó sẽ trả về true hoặc false 
-  // Còn nếu thêm item && , thì nó sẽ cố gắng trả về phần tử trong mảng đã khai báo
-});
-console.log(putFilter);
+// Map
+let arr = [1,3,5,7,9,10];
+for(let i = 0; i < arr.length; i++) { // thay đổi dữ liệu, modify
+  arr[i] = arr[i] * arr[i];
+}
+console.log(arr);
 
-//Find
-let outFind = dogNumber.find((item, index) => { 
-// Find: tìm và xuất ra phần tử đầu tiên trong mảng, object,.vv nếu thỏa điều kiện
-  return item && item.crazy > 1;
+let arrMap = arr.map((item,index) => { // đây là tạo ra mảng mới từ mảng ban đầu
+  item = item * item;
+  return item;
 });
-console.log(outFind);
+console.log(arrMap);
+
+// nếu không muốn thay đổi biến, trả ra mảng mới, thì dùng map
+// muốn tạo ra mảng mới trong biến arr thì dùng map, mảng cũ vẫn như cũ.
