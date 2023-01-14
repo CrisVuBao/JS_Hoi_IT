@@ -1,16 +1,53 @@
-// Async (Asynchronous): Bất đồng bộ
-// + Ex: ví dụ trong ngôn ngữ java có tính (đồng bộ), khi run code, phải chạy code theo thứ tự.
-//cái nào vào trước thì dc chạy trước
-// + Ex 2: ví trọng trong javascript (bất đồng bộ) , không quan trọng thứ tự, code cứ chạy hết, cứ về đến đích là dc, ra kết quả là dc
+// Callback advance
+// Callback: bản chất là có một function, và truyền vào function đấy một cái function khác thì gọi đó là callback.
+// Ex: có function A và B, trong function A có chứa function B, thì function B gọi là callback
 
+// Ex:
+// let sum = (a,b) => {
+//   console.log("hello");
+//   return a + b;
+// };
 
-// Ex Code:
-console.log("Chó");
-console.log("Lợn");
-setTimeout( () => {
-  console.log("Hello dog");
-  
-}, 3000);
-console.log("Gao ồ");
-// như dòng code trên về (bất đồng bộ): kết quả vận xuất ra chó, lợn, gao ồ trước
-//rồi sau đó mới đến hello dog, vì bất đồng bộ là cái nào vào trước thì dc ra kết quả trước, ko cần phải xếp hàng đợi, ko cần theo thứ tự
+// let funSum = () => {  
+//   return sum();
+// };
+// funSum(sum);
+
+// Ex 2:
+// let call = () => {
+//   console.log("hello callback");
+// }
+
+// let sum = () => {
+//   return call();
+// }
+// sum(call);
+
+// Ex 3:
+let callback = (error,data) => {
+  if (error) {
+
+    console.log("calling callback with error", error);
+  }
+  else if (data) {
+    console.log("calling callback with data", data);
+  }
+}
+
+let getTodos = (callback) => {
+  let request = new XMLHttpRequest();
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4 && request.status === 200) {
+      // typecal action to be performed when the document is ready:
+      callback(undefined, "- my data");
+    }
+    if (this.readyState === 4 && request.status !== 200) {
+      callback("- something wrongs", undefined);
+    }
+  }
+  request.open("get", "https://jsonplaceholder.typicode.com/todos",true);
+  request.send();
+}
+
+getTodos(callback);
