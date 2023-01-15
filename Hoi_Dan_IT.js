@@ -1,48 +1,36 @@
-// Promise - Translate: lời hứa
-// Bản chất promise là một function
+// Callback Hell:
+//như kiểu function lồng trong function, thành hình kim tự tháp
+// lý thuyết: lồng xử lý bất đồng bộ của js vào bên trong của nó
 
-const promiseEx = () => {
+    // $.support.cors = true;
+    const callback = (error, data) => {
+        if(error) {
+            console.log("calling callback with error: ", error);
+        }
+        if(data) {
+            console.log("calling callback with data: ", data);
+        }
+    }
 
-    // resolve: là giải quyết được vấn đề // reject: là từ chối vấn đề
-    return new Promise((resolve, reject) => {
-        resolve({name: "pro", age: 100});
-        reject("hello promise");
-    }); 
-}
-promiseEx()
- .then(data => { // data là cái đống shit truyền vào trong hàm resolve
-    // muốn lấy được biến resolve thì phải dùng .then
-    console.log(data);
- }) 
- .catch(error => {
-    // muốn lấy được biến reject phải dùng .catch
-    console.log(error);
- });
+function getTodos(callback) {
+    let request = new XMLHttpRequest();
 
+    request.onreadystatechange = function() {
+        if(this.readyState === 4 && request.status === 200) {
+            const data = JSON.parse(request.responseText);
+            const dataString = JSON.stringify(data)
+            callback(undefined, data);
+            callback(undefined, dataString);
+            callback(undefined, request.responseText);
+        };
 
-//  const promiseCall = (id,callback) => {
+        if(this.readyState === 4 && request.status !== 200) {
+            callback("something wrongs", undefined);
+        };
+    };
+    request.open("get", `https://jsonplaceholder.typicode.com/todos/${id}`,true);
+    request.withCredentials = true;
+    request.send();
+};
 
-//     return new Promise((resolve,reject) => {   
-//     let request = new XMLHttpRequest();
-
-//     request.onreadystatechange = function () {
-//     if (this.readyState === 4 && request.status === 200) {
-//       // typecal action to be performed when the document is ready:
-//     //   callback(undefined, "- my data");
-//     resolve(data);
-//     }
-//     if (this.readyState === 4 && request.status !== 200) {
-//     //   callback("- something wrongs", undefined);
-//     reject("something wrongs");
-//     }
-//   };
-
-//   request.open("get", "https://jsonplaceholder.typicode.com/todos",true);
-//   request.send();
-//     });
-//  };
-//  promiseCall(1).then(data => {
-//     console.log("get data: ", data);
-//  }).catch(err => {
-//     console.log(">>>", err);
-//  });
+   getTodos(1, callback);
