@@ -1,4 +1,4 @@
-// Chaining Promises
+// Fetch API
 
     const callback = (error, data) => {
         if(error) {
@@ -9,7 +9,6 @@
         }
     }
 
-// #8 ********
 function getTodos(id, callback) {
     
     return new Promise((resolve, reject) => {
@@ -32,20 +31,12 @@ function getTodos(id, callback) {
 };
 
 
-// Chaining Promises: giúp cho code tường mình hơn, và nhìn gọn hơn
-//giúp cho ko bị Callback hell
-getTodos(1)
-    .then(data1 => {
-        console.log("get data1: ", data1);
-        return getTodos(2);
-    }).then(data2 => {
-        console.log("get data2: ", data2);
-        return getTodos(3);
-    })
-    .then(data3 => {{
-        console.log("get data3: ", data3);
-    }})
 
-    .catch(err => {
-        console.log("error", err);
-    });
+// #9 Fetch API
+fetch(`https://jsonplaceholder.typicode.com/todos/1`)
+    .then(Response => {
+        return Response.json();
+    })
+    .then(data => {
+        console.log("check fetch data:", data);
+    })
