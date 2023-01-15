@@ -1,5 +1,6 @@
 // Promise - Translate: lời hứa
 // Bản chất promise là một function
+// Promise dùng để fix cho vấn đề code bị Callback hell
 
 const promiseEx = () => {
 
