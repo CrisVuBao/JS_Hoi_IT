@@ -22,7 +22,7 @@ function getTodos(id, callback) {
             };
 
             if(this.readyState === 4 && request.status !== 200) {
-            callback("something wrongs ", undefined);
+            reject("something wrongs with id: " + id);
             };
     };
     request.open("get", `https://jsonplaceholder.typicode.com/todos/${id}`,true);
@@ -31,6 +31,9 @@ function getTodos(id, callback) {
     });   
 };
 
+
+// Chaining Promises: giúp cho code tường mình hơn, và nhìn gọn hơn
+//giúp cho ko bị Callback hell
 getTodos(1)
     .then(data1 => {
         console.log("get data1: ", data1);
