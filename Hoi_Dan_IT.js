@@ -44,7 +44,7 @@ const getNewTodo = async(id) => {
 console.log(getNewTodo()); // nếu chỉ getNewTodo thôi thì , sẽ là tham chiếu đến hàm async()
                             // nếu getNewTodo() , đang gọi hàm getNewTodo
 
-getNewTodo(3).then(data => {
+getNewTodo(3).then(data => { // đây là một promise
     console.log("get data: ", data);
 });
 
