@@ -1,5 +1,4 @@
-// Fetch API
-
+// Async & Await
     const callback = (error, data) => {
         if(error) {
             console.log("calling callback with error: ", error);
@@ -32,11 +31,20 @@ function getTodos(id, callback) {
 
 
 
-// #9 Fetch API
-fetch(`https://jsonplaceholder.typicode.com/todos/1`)
-    .then(Response => {
-        return Response.json();
-    })
-    .then(data => {
-        console.log("check fetch data:", data);
-    })
+// #10 Async & Await 
+// xử lý bất đồng bộ sao dễ vậy
+// * Async
+const getNewTodo = async(id) => {
+   let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+   let data = await response.json(); 
+   console.log("get data", data);
+    // nếu console ra promise {pending}: gọi là code chạy xong rồi, nhưng promise chưa trả ra kết quả, nghĩa là: đang tạm ngừng.
+
+}
+console.log(getNewTodo()); // nếu chỉ getNewTodo thôi thì , sẽ là tham chiếu đến hàm async()
+                            // nếu getNewTodo() , đang gọi hàm getNewTodo
+
+getNewTodo(3).then(data => {
+    console.log("get data: ", data);
+});
+
