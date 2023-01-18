@@ -25,3 +25,8 @@ Step 6: git commit -m "_comment_"  +  Step 7: git push origin _nameBranch_
 !!! IF ERROR 403, v.v.. : Delete folder ".git"
 
 Switch branch in git: git checkout _branch_
+
+
+Nếu bị lỗi: git error push some refs (1 dòng chữ đỏ, và nhiều dòng chữ vàng) thì fix như sau:
++ vào youtube: https://www.youtube.com/watch?v=IeL7iq7Lb90
++ git pull --rebase origin master
