@@ -30,3 +30,7 @@ Switch branch in git: git checkout _branch_
 Nếu bị lỗi: git error push some refs (1 dòng chữ đỏ, và nhiều dòng chữ vàng) thì fix như sau:
 + vào youtube: https://www.youtube.com/watch?v=IeL7iq7Lb90
 + git pull --rebase origin master
+
+Fix lỗi chữ màu vàng "Updates were rejected because the remote contains work that you do"
++ git fetch origin "_branch_"
++ git merge origin "_branch_"
