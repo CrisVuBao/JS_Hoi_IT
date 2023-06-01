@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa các thuộc tính biến đổi</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .row{
+                float: left;
+                width: 100%;
+            }
+            .boxcenter{
+                width: 70%;
+                margin: 0 auto;
+            }
+            .bgc{
+                background-color: #eee;
+            }
+            .mh{
+                min-height: 40px;
+            }
+            .menu > ul{
+                padding: 10px;
+            }
+            ul{
+                list-style-type: none;    
+            }
+            .cap1 >li{
+                display: inline;
+                margin: 10px 0px;
+                padding: 10px;
+                position: relative;
+            }
+            ul li ul{
+                display: none;
+                background-color: #ddd;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                width: 120px;
+            }
+            .menu > ul >li:hover{
+                background-color: yellow;
+            }
+            ul > li:hover ul{
+                display: block;
+            }
+            ul li ul li{
+                padding: 10px 5px;
+            }
+            ul li ul li:hover{
+                color: red;
+            }
+            a{
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="boxcenter">
+
+                <div class="menu bgc">
+                    <ul class="cap1">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="#">Phòng ban</a>
+                            <ul>
+                                <li><a href="#">Hành chính</a></li>
+                                <li><a href="#">Đào tạo</a></li>
+                                <li><a href="#">Khảo thí</a></li>
+                                <li><a href="#">Tài chính</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Trung tâm</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </b0ody>
+</html>

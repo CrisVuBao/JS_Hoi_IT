@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa các thuộc tính biến đổi</title>
+        <style>
+          .d0{
+            width: 210px;
+            height: 140px;
+            background-color: yellow;
+            margin: 100px;
+            
+            font-family: sans-serif;
+            font-weight: bold;
+            color: red;
+            transition: 1s; /*cài đặt hiệu ứng*/
+            position: relative;
+          }
+          .d0::after{
+            content: '';
+            width: 30%;
+            
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            transition: 0.8s;
+            z-index: 5;
+           top: 0;
+           left: 0;
+           margin-top: calc(50% - 43,75px);
+           margin-left: 50%;
+          }
+          .d0:hover::after{
+            height: 80%;
+            width: 80%;
+            transform: scale(1.2) ;
+          }
+
+          .do img{
+            width: 100%;
+            display: block;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="d0">
+            <img src="./images/06.webp" alt="">
+        </div>
+    </body>
+</html>

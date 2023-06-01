@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa đơn zing</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .mb{
+                margin-bottom: 30px;
+            }
+            .bb{
+                border-bottom: 1px solid #999;
+            }
+            .row{
+                float: left;
+                width: 100%;
+            }
+            .boxcenter{
+                width: 60%;
+                margin: 0 auto;
+                position: relative;
+            }
+            .bgc1{
+                /* background-color: #eee; */
+            }
+            .bgc2{
+                /* background-color: aqua; */
+            }
+            .mh100{
+                min-height: 100px;
+            }
+            .mh400{
+                min-height: 400px;
+            }
+
+            a{
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+                color: #444;
+                float: left;
+                margin-right: 20px;
+                margin-top: 20px;
+                padding: 10px 0;
+                position: relative;
+            }
+            ul{
+                list-style-type: none;
+            }
+            img{
+                float: left;
+                width: 15%;
+                margin: 20px 40px 5px 0px;
+            }
+            .user, .search{
+                float: right;
+                margin: 20px 0px 5px 20px;
+            }
+            a:hover{
+                color: #3399cc;
+            }
+            a:hover::before{
+                content: '';
+                width: 100%;
+                position: absolute;
+                bottom: -5px;
+                border: 2px solid #3399cc;
+            }
+            .dots{
+                font-size: 24px;
+                font-weight: bold;
+                top: -10px;
+                position: relative;
+            } 
+            .dots, a:hover{
+                color: none  ;
+            }
+            ul li{
+                display: none;
+                background-color: #ddd;
+                position:absolute;               
+            }
+            ul li:hover{
+                display: block;
+                background-color: #ddd;
+            }           
+        </style> 
+    </head>
+    <body>
+        <div class="row bgc2 mh400">
+            <div class="boxcenter bgc1 mh100">
+               <img src="./images/LOGO.png" alt="">
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a href="#">xuất bản</a>
+               <a class="dots" href="#">...
+                    <ul>
+                        <li><a href="#">win</a></li>
+                        <li><a href="#">win</a></li>
+                        <li><a href="#">win</a></li>
+                    </ul>
+               </a>
+            </div>    
+        </div>
+
+    </body>
+</html>

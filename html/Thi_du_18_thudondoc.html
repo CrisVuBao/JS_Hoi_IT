@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa đơn dọc 2 cấp</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .row{
+                float: left;
+                width: 100%;
+            }
+            .boxcenter{
+                width: 70%;
+                margin: 0 auto;
+            }
+            .boxleft{
+                width: 25%;
+                float: left;
+            }
+            .bgc1{
+                background-color: #eee;
+            }
+            .bgc2{
+                background-color: aqua;
+            }
+            .mh100{
+                min-height: 100px;
+            }
+            .mh400{
+                min-height: 400px;
+            }
+            ul{
+                list-style-type: none;
+            }
+            .boxleft >ul>li{
+                padding: 10px;
+                border-bottom: 1px solid black;
+            }
+            .boxleft > ul li:nth-last-child(1){
+                border-bottom: none;
+            }
+            .boxleft > ul >li:hover{
+                background-color: yellow;
+            }
+            .boxleft > ul >li:hover a{
+                color: red;
+            }
+
+            a{
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="row">
+        <div class="boxcenter bgc1 mh400">
+            <div class="boxleft bgc2 mh100">
+                <ul>
+                    <li><a href="#" >Điện thoại</a></li>
+                    <li><a href="#" >Điện thoại</a></li>
+                        <ul>
+                            <li><a href="#" >Điện thoại</a></li>
+                        </ul>
+                    <li><a href="#" >Điện thoại</a></li>
+                    <li><a href="#" >Điện thoại</a></li>
+                </ul>
+            </div>    
+        </div>
+       </div> 
+    </body>
+</html>

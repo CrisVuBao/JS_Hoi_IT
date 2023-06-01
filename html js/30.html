@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>DOM EVENTS </title>
+         <style>
+           
+         </style>
+     </head>
+     <body>
+       <!-- sự kiện click trên h1 => có thể gọi đến tên hàm() -->
+      <h1 onclick="console.log(Math.random());">DOM EVENTS H1</h1>    
+      
+      <!-- khi click trên span => sự kiện click trên span =>  sự kiện click trên h2 -->
+      <!-- do hành vi sự kiện nổi bọt đến các phần tử cha, ... => sẽ trình bày cách loại bỏ sau -->
+      <!--  từ khóa this tham chiếu đến phần tử phát sinh sự kiện -->
+      <h2 onclick="console.log(this);">
+        <span onclick="console.log(this);">DOM EVENTS </span>
+      </h2>
+       <script src="../JS/30.js"></script>
+     </body>
+     
+ </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa các thuộc tính biến đổi</title>
+        <style>
+          .d0{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 100px;
+            padding: 10px 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: red;
+            transition: 0.5s; /*cài đặt hiệu ứng*/
+            position: relative;
+          }
+          .d0::before{
+            content: '';
+            display: block;
+            width: 50px;
+            height: 23px;
+            transform: skew(-15deg);
+            /* background-color: brown; */
+            border-left: 4px solid blue;
+            position: absolute;
+            top: 5px;
+            left: 8px;
+          }
+          .d0::after{
+            content: 'HOT';
+            text-align: center;
+            line-height: 50px;
+            
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: blue;
+            position: absolute;
+            transform: 0.5s;
+            opacity: 0;
+            left: calc(50%-25px);
+            top: calc(50% + 275px);
+          }
+          .d0:hover::after{
+           transform: translateY(-300px);
+           opacity: 1;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="d0">MULTIMEDIA</div>
+    </body>
+</html>

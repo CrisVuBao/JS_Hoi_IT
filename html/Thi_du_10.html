@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Minh họa các thuộc tính biến đổi</title>
+        <style>
+          .d0{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 20px;
+            transition: 0.5s; /*cài đặt hiệu ứng*/
+          }
+          .d0:hover{
+            /*transform: scaleX(1.5); /*phóng to kích thước theo chiều ngang*/
+            /*transform: scaleY(2); */
+            /* transform: scale(1.5, 2); */
+
+            /*xoay hình*/
+            transform: rotate(500deg);
+          }
+        </style>
+    </head>
+    <body>
+        <div class="d0"></div>
+    </body>
+</html>
